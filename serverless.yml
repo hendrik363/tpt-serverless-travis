@@ -1,0 +1,14 @@
+service: tpt-serverless-test
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+functions:
+  calculator:
+    handler: handler.calculator
+    events:
+      - http:
+          path: calculator
+          method: get
+
